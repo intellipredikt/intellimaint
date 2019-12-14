@@ -62,8 +62,8 @@ class BearingPrognostics:
 
 		# save som model and weights
 		# saving the som in the file som.p
-		# with open('som.p', 'wb') as outfile:
-		#     pickle.dump(self.som, outfile)
+		with open('som.p', 'wb') as outfile:
+		    pickle.dump(self.som, outfile)
 
 	def train_gpr(self):
 		test_3 = self.get_test_input_vector() # has degradation area

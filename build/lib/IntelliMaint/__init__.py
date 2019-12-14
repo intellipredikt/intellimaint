@@ -1,0 +1,1 @@
+from IntelliMaint.BearingPrognostics import BearingPrognostics
