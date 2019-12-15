@@ -8,7 +8,7 @@ setuptools.setup(name='IntelliMaint',
 		author='IPTLP0032',
 		author_email="author@example.com",
 		description="A prognostics package by IPT",
-		install_requires=['sklearn', 'GPy', 'minisom', 'scipy', 'matplotlib', 'numpy'],
+		install_requires=['sklearn', 'GPy', 'minisom', 'scipy', 'matplotlib', 'numpy>=1.16.1'],
 		packages=setuptools.find_packages(),
 		package_data={
 		'IntelliMaint.numpy_data': ['*']
