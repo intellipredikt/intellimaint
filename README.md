@@ -36,7 +36,7 @@ b.train_gpr()
 b.predict_rul()
 ```
 ## Result
-![Sample Result](images/results.png "RUL Prediction" )
+![Sample Result](images/RUL_Battery_Animation.gif "RUL Prediction" )
 
 ## How to use the library for health prediction of other components?
 
