@@ -1,6 +1,0 @@
-sklearn
-GPy
-minisom
-scipy
-matplotlib
-numpy
