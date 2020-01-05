@@ -76,7 +76,7 @@ from IntelliMaint.rul_models import DegradationModel
 from IntelliMaint.health_indicators import FeatureIndicator
 from IntelliMaint import Utils
 
-utils = Utils() # i-th data-set out of 218 data-sets
+utils = Utils()
 
 # step 1: Get Features
 soh = utils.get_features('battery') # state of health
