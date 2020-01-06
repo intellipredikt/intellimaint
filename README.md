@@ -116,5 +116,9 @@ model.update()
 * Predict mult-step in the future, observe the true HI values.
 * Update the degradation model.
 
-### For any queries 
+## Reference
+
+[Hong, Sheng, Zheng Zhou, Chen Lu, Baoqing Wang, and Tingdi Zhao. "Bearing remaining life prediction using Gaussian process regression with composite kernel functions." * Journal of Vibroengineering 17 * , no. 2 (2015): 695-704.](https://www.jvejournals.com/article/15105)
+
+## For any queries 
 iptgithub@intellipredikt.com
