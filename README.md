@@ -118,7 +118,7 @@ model.update()
 
 ## Reference
 
-[Hong, Sheng, Zheng Zhou, Chen Lu, Baoqing Wang, and Tingdi Zhao. "Bearing remaining life prediction using Gaussian process regression with composite kernel functions." * Journal of Vibroengineering 17 * , no. 2 (2015): 695-704.]
+[Hong, Sheng, Zheng Zhou, Chen Lu, Baoqing Wang, and Tingdi Zhao. "Bearing remaining life prediction using Gaussian process regression with composite kernel functions." *Journal of Vibroengineering 17* , no. 2 (2015): 695-704.]
 
 ## For any queries 
 iptgithub@intellipredikt.com
