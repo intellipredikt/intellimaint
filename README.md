@@ -2,7 +2,7 @@
 
 IntelliMaint library offers an integrated set of functions written in Python that aids in vehicle health diagnostics. The library includes various state-of-the-art algorithms that are accessible by users with simple APIs. Thus the library accelerates the analysis and the development phase for even the novice users. Most of the APIs are provided with intuitive visualizations that guide in choosing the apt algorithm for a system component. Each block in the library is built as an independent module thus used as a plug and play module. The expert users are provided with a provision to add new algorithms for specific use cases. 
 
-![Architecture](images/Architecture.png "Architecture" )
+![Architecture](images/Architecture.jpeg "Architecture" )
 
 ## Installing the package:
 - Clone the repository
