@@ -9,7 +9,7 @@ dirname = os.path.dirname(__file__)
 class Utils:
 	def __init__(self):
 		self.turboengine_idx = 1
-		self.bearing_idx = 1
+		self.bearing_idx = 4
 
 	def get_features(self, component_type):
 
@@ -25,14 +25,17 @@ class Utils:
 			return data
 
 		def get_battery_data():
-			data_dir='examples/data/battery_data/B0005_discharge.json'
+			data_dir='examples/data/battery_data/B0006_discharge.json'
 			data_dir = dirname + '/' + data_dir
 			with open(data_dir) as f:    
 			    discharge_data = json.load(f)
 			data = []
+			time_stamps = []
 			for cycle in discharge_data.keys():
 				data.append(discharge_data[cycle]["capacity"][0]) # remove the last dimension
+				time_stamps.append(discharge_data[cycle]["date_time"])
 			soh = np.array(state_of_health(data)).reshape(len(data), 1)
+			times = np.array(time_stamps).reshape(len(time_stamps), 1)
 			return soh
 
 		if (component_type == 'turboengine'):
@@ -57,7 +60,38 @@ class Utils:
 			return all_data_np
 
 		elif (component_type == 'battery'):
-			return (get_battery_data())
+			return get_battery_data()
+			
+	def check1(self, data):
+		assert isinstance(data,np.ndarray),'*** Please provide numpy array as input ***'
+		assert len(data.shape)>0,'*** Ensure the array is not empty ***'
+		assert np.all(np.isfinite(data)),'*** Remove NaN and Inf values from the numpy array'
 
+	# Count the number of positive peaks
+	def count_pos(self, data):
+	    if(len(data.shape) == 1):
+	        count = (data>0).sum()
+	    else:
+	        count = [(column>0).sum() for column in data.T]
+	    return np.asarray(count)
+
+	def count_neg(self, data):
+	    if(len(data.shape) == 1):
+	        count = (data<0).sum()
+	    else:
+	        count = [(column<0).sum() for column in data.T]
+	    return np.asarray(count)
+
+
+	def zscore(self, data, mu, sigma):
+		z_s = (data - mu)/sigma
+		return z_s    
+
+	def zs_param(self, train, percentileScore=None):
+		if(percentileScore == None):
+			mu, sigma = np.mean(train), np.std(train)
+		else:
+			mu, sigma = np.percentile(train,percentileScore), np.std(train)
+		return mu, sigma
 
 
