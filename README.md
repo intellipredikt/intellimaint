@@ -17,7 +17,7 @@ $ python setup.py install
 
 
 ## Result
-![Sample Result](images/RUL_Battery_Animation_2.gif "RUL Prediction" )
+![Sample Result](images/bearing_demo.gif "RUL Prediction" )
 
 ## How to use the library for health prediction of other components?
 
